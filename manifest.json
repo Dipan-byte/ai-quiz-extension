@@ -1,0 +1,27 @@
+{
+    "manifest_version" : 3 ,
+    "name" : "ai-quiz" ,
+    "version" : "1.0" ,
+    "descript" : "it summarizes the  articles and give you a quiz type game " ,
+    "permision" : ["scripting" , "activeTab" , "storage"],
+    "background" : {
+        "service_worker" : "backgound.js"
+
+    } ,
+    "action" : {
+            "default_popup": "src/popup/popup.html",
+            "default_icon": "public/icon.png"
+        },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/pages/*.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
