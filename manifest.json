@@ -5,7 +5,7 @@
     "descript" : "it summarizes the  articles and give you a quiz type game " ,
     "permision" : ["scripting" , "activeTab" , "storage"],
     "background" : {
-        "service_worker" : "backgound.js"
+        "service_worker" : "background.js"
 
     } ,
     "action" : {
